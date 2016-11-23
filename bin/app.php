@@ -3,17 +3,18 @@
 use Zend\Console\Console;
 use ZF\Console\Application;
 
-chdir(dirname(__DIR__));
+chdir(realpath(__DIR__.'/../../../../'));
 
 include 'vendor/autoload.php';
 
 $application = new Application(
     "ZF-Console Skeleton",
     "1.0",
-    include 'config/module.config.php',
+    include __DIR__.'/../config/module.config.php',
     Console::getInstance()
 );
 
-$exit = $application->run();
+$exit = $application->run();clear
+
 exit($exit);
 
