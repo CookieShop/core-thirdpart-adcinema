@@ -14,7 +14,7 @@ $application = new Application(
     Console::getInstance()
 );
 
-$exit = $application->run();clear
+$exit = $application->run();
 
 exit($exit);
 
